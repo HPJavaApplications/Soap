@@ -1,0 +1,27 @@
+Curl:
+
+
+curl --location --request POST 'http://localhost:8080/ws' \
+--header 'Content-Type: text/xml' \
+--data-raw '<SOAP-ENV:Envelope
+	xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/">
+    <SOAP-ENV:Header/>
+        
+    <SOAP-ENV:Body>
+        <ns2:CustomerRequest
+			xmlns:ns2="http://localhost:8080/ws">
+            <ns2:customerName>Sri Harsha Gangavelli</ns2:customerName>
+            <ns2:age>31</ns2:age>
+            <ns2:yearlyIncome>787455645747775514</ns2:yearlyIncome>
+            <ns2:cibilScore>714</ns2:cibilScore>
+            <ns2:employmentMode>employmentMode</ns2:employmentMode>
+        </ns2:CustomerRequest>
+    </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>'
+
+
+
+
+WSDL File Location(URL):
+
+http://localhost:8080/ws/loanEligibility.wsdl
